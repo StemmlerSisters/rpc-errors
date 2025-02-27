@@ -7,6 +7,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [7.0.2]
+
+### Changed
+
+- Bump `@metamask/utils` from `^10.0.0` to `^11.0.1` ([#166](https://github.com/MetaMask/rpc-errors/pull/166))
+
+## [7.0.1]
+
+### Changed
+
+- Bump `@metamask/utils` from `^9.0.0` to `^10.0.0` ([#161](https://github.com/MetaMask/rpc-errors/pull/161))
+
+## [7.0.0]
+
+### Changed
+
+- **BREAKING**: Preserve original messages during error serialization by default ([#158](https://github.com/MetaMask/rpc-errors/pull/158))
+  - The behavior introduced in [`5.0.0`](#500) of overwriting the original message is available by passing `shouldPreserveMessage: false` to `serializeError()`.
+- **BREAKING:** Bump minimum Node.js version from 16 to 18 ([#154](https://github.com/MetaMask/rpc-errors/pull/154))
+
+## [6.4.0]
+
+### Changed
+
+- Migrate to `ts-bridge` ([#152](https://github.com/MetaMask/rpc-errors/pull/152))
+  - Migrates to [ts-bridge](https://ts-bridge.dev) from `tsup`, which may resolve issues when importing this package in CommonJS or ESM.
+
 ## [6.3.1]
 
 ### Changed
@@ -195,7 +222,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `serializeError`
   - If the object passed to the function has a `.message` property, it will preferred over the `.message` property of the fallback error when creating the returned serialized error object
 
-[Unreleased]: https://github.com/MetaMask/rpc-errors/compare/v6.3.1...HEAD
+[Unreleased]: https://github.com/MetaMask/rpc-errors/compare/v7.0.2...HEAD
+[7.0.2]: https://github.com/MetaMask/rpc-errors/compare/v7.0.1...v7.0.2
+[7.0.1]: https://github.com/MetaMask/rpc-errors/compare/v7.0.0...v7.0.1
+[7.0.0]: https://github.com/MetaMask/rpc-errors/compare/v6.4.0...v7.0.0
+[6.4.0]: https://github.com/MetaMask/rpc-errors/compare/v6.3.1...v6.4.0
 [6.3.1]: https://github.com/MetaMask/rpc-errors/compare/v6.3.0...v6.3.1
 [6.3.0]: https://github.com/MetaMask/rpc-errors/compare/v6.2.1...v6.3.0
 [6.2.1]: https://github.com/MetaMask/rpc-errors/compare/v6.2.0...v6.2.1
